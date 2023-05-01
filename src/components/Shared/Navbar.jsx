@@ -27,7 +27,8 @@ const Navbar = () => {const navRef = useRef();
 				<Link to=''>About Us</Link>
 				<Link to=''>Blog</Link>
 				<Link to=''>Contact Us</Link>
-        <button className='btn btn-info'>Login</button>
+        <Link to='/login' className='btn btn-info'>
+         <button>Login</button></Link>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
