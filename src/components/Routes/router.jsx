@@ -6,11 +6,14 @@ import {
 import Layout from '../Layout/Layout';
 import Login from '../Login/Login/Login';
 import Register from '../Login/Register/Register';
+import SingleChef from '../Chef/SingleChef';
+import ErrorPage from '../Shared/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/login',
@@ -22,6 +25,12 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '/chef/:id',
+    element: <SingleChef></SingleChef>,
+    errorElement: <ErrorPage></ErrorPage>,
+    loader: ({params}) => fetch(`http://localhost:3000/allChef/${params.id}`)
+  }
 ]);
 
 export default router;

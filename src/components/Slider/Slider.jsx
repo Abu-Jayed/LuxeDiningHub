@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import Marquee from "react-fast-marquee";
+import './Slider.css'
+
 
 const Slider = () => {
   const images = [
@@ -13,6 +16,7 @@ const Slider = () => {
   ];
 
   return (
+    <div>
     <div className="hover:shadow-md  border-red-300 mt-10 mb-20 md:w-[90%] mx-auto grid md:grid-cols-2 justify-between items-center ">
       <div className="w-[550px]">
         <Fade>
@@ -40,6 +44,11 @@ const Slider = () => {
         <Link ><button className=" border-2 hover:bg-yellow-500 hover:translate-x-1 hover:translate-y-1 hover:border-t-4 hover:border-l-4 hover:shadow-2xl transform btn bg-yellow-500">About Us</button> </Link>
         </div>
       </div>
+    </div>
+      <Marquee speed={160} className="bg-yellow-400 h-48 text-6xl font-bold ">
+        I can be a React component, <img className="rotate" src="https://assets.website-files.com/622ae0dc1c5d7674e36a2e37/622c3bff414f267643d6fa83_Ticker1.png" alt="" /> multiple React <img className="rotate" src="https://assets.website-files.com/622ae0dc1c5d7674e36a2e37/622c3bff122fb63e435f4bff_Ticker2.png" alt="" /> components, or just some
+        text.
+      </Marquee>
     </div>
   );
 };
