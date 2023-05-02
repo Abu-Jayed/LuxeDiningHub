@@ -14,22 +14,30 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout></Layout>,
     errorElement: <ErrorPage></ErrorPage>,
-    children: [
-      {
-        path: '/login',
-        element: <Login></Login>
-      },
-      {
-        path: '/register',
-        element: <Register></Register>
-      }
-    ]
+    // children: [
+    //   {
+    //     path: '/login',
+    //     element: <Login></Login>
+    //   },
+    //   {
+    //     path: '/register',
+    //     element: <Register></Register>
+    //   }
+    // ]
   },
   {
     path: '/chef/:id',
     element: <SingleChef></SingleChef>,
     errorElement: <ErrorPage></ErrorPage>,
     loader: ({params}) => fetch(`http://localhost:3000/allChef/${params.id}`)
+  },
+  {
+    path: '/login',
+    element: <Login></Login>
+  },
+  {
+    path: '/register',
+    element: <Register></Register>
   }
 ]);
 

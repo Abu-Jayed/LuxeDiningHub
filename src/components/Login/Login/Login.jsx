@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { toast } from "react-hot-toast";
+import { Toaster, toast } from "react-hot-toast";
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../../firebase/firebase.config";
 
@@ -35,9 +35,9 @@ const Login = () => {
     const googleProvider = new GoogleAuthProvider()
     signInWithPopup(auth,googleProvider)
     .then(result =>{
+      toast.success('sign in with google successfully')
       console.log(result.user);
       setError('')
-      toast.success('sign in with google successfully')
     })
     .catch(err => {
       console.log(err.message);
@@ -131,6 +131,7 @@ const Login = () => {
         {
           error
         }
+        <Toaster></Toaster>
       </div>
     </>
   );
