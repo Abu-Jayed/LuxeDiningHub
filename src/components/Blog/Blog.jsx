@@ -1,15 +1,16 @@
 import React from "react";
 import Navbar from "../Shared/Navbar";
 import { FaDownload } from "react-icons/fa";
+import pdf from './Blog.pdf'
 
 const Blog = () => {
   return (
     <section>
       <Navbar></Navbar>
       <section className="flex w-full mt-2 pr-5 flex-row-reverse">
-        <div className="flex items-center gap-2">
-        <p>Download </p><FaDownload></FaDownload> 
-        </div>
+        <a href={pdf} download='pdf file' className="flex items-center gap-2">
+          Download <FaDownload></FaDownload>
+        </a>
       </section>
       <section className="md:mx-auto mt-20 grid md:grid-cols-2  md:w-[900px] md:h-[400px] border-gray-500  gap-1 mb-10">
         {/* modal container-1 */}
@@ -34,14 +35,15 @@ const Blog = () => {
                   components?
                 </h3>
                 <p className="py-4">
-                  <span className="font-bold">ans:</span> In React, uncontrolled components maintain their own state,
-                  while controlled components receive updates from their parent
-                  components. Uncontrolled components are simpler to use for
-                  basic form inputs, but controlled components provide more
-                  predictability and ease of debugging for complex forms.
-                  Choosing between controlled and uncontrolled components
-                  depends on the form requirements and desired level of control
-                  over the form's state.
+                  <span className="font-bold">ans:</span> In React, uncontrolled
+                  components maintain their own state, while controlled
+                  components receive updates from their parent components.
+                  Uncontrolled components are simpler to use for basic form
+                  inputs, but controlled components provide more predictability
+                  and ease of debugging for complex forms. Choosing between
+                  controlled and uncontrolled components depends on the form
+                  requirements and desired level of control over the form's
+                  state.
                 </p>
                 <div className="modal-action">
                   <label htmlFor="my-modal-1" className="btn">
@@ -74,12 +76,13 @@ const Blog = () => {
                   Q: How to validate React props using PropTypes
                 </h3>
                 <p className="py-4">
-                <span className="font-bold">ans:</span> To validate React props using PropTypes, import the PropTypes
-                  library, define the expected props as an object in the
-                  component, and use PropTypes to check the types of the passed
-                  props. For example, PropTypes.string would check that a prop
-                  is a string, while PropTypes.number.isRequired would check
-                  that a prop is a required number.
+                  <span className="font-bold">ans:</span> To validate React
+                  props using PropTypes, import the PropTypes library, define
+                  the expected props as an object in the component, and use
+                  PropTypes to check the types of the passed props. For example,
+                  PropTypes.string would check that a prop is a string, while
+                  PropTypes.number.isRequired would check that a prop is a
+                  required number.
                 </p>
                 <div className="modal-action">
                   <label htmlFor="my-modal-2" className="btn">
@@ -110,15 +113,15 @@ const Blog = () => {
                   Q: What is the difference between nodejs and express js.
                 </h3>
                 <p className="py-4">
-                <span className="font-bold">ans:</span> Node.js is a runtime environment for executing JavaScript
-                  outside of a web browser, while Express.js is a web framework
-                  for Node.js. Node.js provides the core functionality for
-                  running JavaScript on the server-side, while Express.js
-                  provides additional features for building web applications,
-                  such as routing, middleware, and templating. While Node.js can
-                  be used without a framework, Express.js simplifies and
-                  streamlines the development process for building web
-                  applications with Node.js.
+                  <span className="font-bold">ans:</span> Node.js is a runtime
+                  environment for executing JavaScript outside of a web browser,
+                  while Express.js is a web framework for Node.js. Node.js
+                  provides the core functionality for running JavaScript on the
+                  server-side, while Express.js provides additional features for
+                  building web applications, such as routing, middleware, and
+                  templating. While Node.js can be used without a framework,
+                  Express.js simplifies and streamlines the development process
+                  for building web applications with Node.js.
                 </p>
                 <div className="modal-action">
                   <label htmlFor="my-modal-3" className="btn">
@@ -146,14 +149,16 @@ const Blog = () => {
             <div className="modal modal-bottom sm:modal-middle">
               <div className="modal-box">
                 <h3 className="font-bold text-lg">
-                 Q: What is a custom hook, and why will you create a custom hook?
+                  Q: What is a custom hook, and why will you create a custom
+                  hook?
                 </h3>
                 <p className="py-4">
-                <span className="font-bold">ans:</span> A custom hook is a reusable function that encapsulates
-                  commonly used logic in React components. Creating a custom
-                  hook helps to avoid code duplication, makes code more modular,
-                  and promotes code reuse across different components. It also
-                  simplifies testing and maintenance of the code.
+                  <span className="font-bold">ans:</span> A custom hook is a
+                  reusable function that encapsulates commonly used logic in
+                  React components. Creating a custom hook helps to avoid code
+                  duplication, makes code more modular, and promotes code reuse
+                  across different components. It also simplifies testing and
+                  maintenance of the code.
                 </p>
                 <div className="modal-action">
                   <label htmlFor="my-modal-4" className="btn">
