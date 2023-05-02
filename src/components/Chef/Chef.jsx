@@ -6,16 +6,16 @@ const Chef = () => {
   const [allChef,setAllChef] = useState([])
 
   useEffect(()=>{
-    fetch('http://localhost:3000/allChef')
+    fetch('https://hero-chef-server-ajwebdevlopment-gmailcom.vercel.app/allChef')
     .then(res => res.json())
     .then(data => setAllChef(data))
   },[])
   console.log(allChef);
   return (
-    <div className="mb-14">
+    <div className="mb-14 mt-28">
       <div className="text-center w-[60%] mx-auto">
         <h1 className="text-5xl">Member's We Proude Of</h1>
-        <p>
+        <p className="mb-10">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat aliquam
           amet, cursus tellus non consequat laoreet eget ornare. Tellus
           vulputate tellus a, lobortis et nisl. Quisque vulputate eget et,

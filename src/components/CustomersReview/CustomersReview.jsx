@@ -12,40 +12,44 @@ const CustomersReview = () => {
   ];
   return (
     <div>
-      <div className="hover:shadow-md  border-red-300 mt-10 mb-20 md:w-[90%] mx-auto grid md:grid-cols-2 justify-between items-center ">
+      <div className="hover:shadow-md  border-red-300 mt-10 mb-20 md:w-[90%] mx-auto">
         <div className="w-96 md:w-[1000px]">
           <Fade>
             <div className="p-10 each-slide">
-              <div>
-                <img className="w-60 rounded-lg" src={images[0]} />
+              <div className="w-10">
+                <img className=" rounded-lg" src={images[1]} />
               </div>
               <div>
-                <h1 className="text-4xl">
+                <h1 className="text-2xl lg:text-4xl">
                   “Thanks to vinovest I can now invest in something i am
-                  passionate about”
+                  passionate ”
                   <small className="text-2xl">Makenna Weinstein</small>
                 </h1>
               </div>
             </div>
             <div className="p-10 each-slide">
-              <div>
-                <img className="w-60 rounded-lg" src={images[1]} />
+              <div className="w-10">
+                <img className=" rounded-lg" src={images[0]} />
               </div>
-              <h1 className="text-4xl">
-                “Thanks to vinovest I can now invest in something i am
-                passionate about”
-                <small className="text-2xl">Makenna Weinstein</small>
-              </h1>
+              <div>
+                <h1 className="text-2xl lg:text-4xl">
+                  “Thanks to vinovest I can now invest in something i am
+                  passionate ”
+                  <small className="text-2xl">Makenna Weinstein</small>
+                </h1>
+              </div>
             </div>
             <div className="p-10 each-slide">
-              <div>
-                <img className="w-60 rounded-lg" src={images[2]} />
+              <div className="w-10">
+                <img className=" rounded-lg" src={images[2]} />
               </div>
-              <h1 className="text-4xl">
-                “Thanks to vinovest I can now invest in something i am
-                passionate about”
-                <small className="text-2xl">Makenna Weinstein</small>
-              </h1>
+              <div>
+                <h1 className="text-2xl lg:text-4xl">
+                  “Thanks to vinovest I can now invest in something i am
+                  passionate ”
+                  <small className="text-2xl">Makenna Weinstein</small>
+                </h1>
+              </div>
             </div>
           </Fade>
         </div>

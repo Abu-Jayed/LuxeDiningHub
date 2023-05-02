@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     path: "/chef/:id",
     element: <PrivetRoute><SingleChef></SingleChef></PrivetRoute> ,
     errorElement: <ErrorPage></ErrorPage>,
-    loader: ({ params }) => fetch(`http://localhost:3000/allChef/${params.id}`),
+    loader: ({ params }) => fetch(`https://hero-chef-server-ajwebdevlopment-gmailcom.vercel.app/allChef/${params.id}`),
   },
   {
     path: "/login",
