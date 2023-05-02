@@ -3,6 +3,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-hot-toast';
+import Navbar from '../../Shared/Navbar';
 
 const Register = () => {
   const {user,createUser,updateUser} = useContext(AuthContext)
@@ -39,6 +40,7 @@ const Register = () => {
   }
   return (
     <>
+    <Navbar></Navbar>
       <div className="text-black md:w-[666px] mx-auto rounded-3xl bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 p-10 mb-14 mt-14">
       <h3 className="text-center text-cyan-300 text-3xl font-bold tracking-wide mb-5">Register to your account</h3>
         <form className="w-96 mx-auto" onSubmit={handleRegister}>

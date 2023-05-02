@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 import logo from '../../assets/logo.png'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
+import { Toaster, toast } from 'react-hot-toast';
 const Navbar = () => {const navRef = useRef();
+
+	const {user,logOut} = useContext(AuthContext)
+	const [error,setError] = useState('')
+	const handleLogOur =()=>{
+		logOut()
+		.then(()=>{
+			return toast.success('User logout successfully')
+		})
+		.catch(err =>{
+			console.log(err.message);
+			setError(err.message)
+		})
+	}
 
 	const showNavbar = () => {
 		navRef.current.classList.toggle(
@@ -21,14 +36,19 @@ const Navbar = () => {const navRef = useRef();
 			<h3>Chef Hero</h3>
       </Link>
       </div>
-			<nav ref={navRef}>
-				<Link to='/'>Home</Link>
+			<nav id='sidebar' className='bg-slate-50' ref={navRef}>
+				 
+				<NavLink to='/' className=''>Home</NavLink>
+				
 				<Link to=''>Order Online</Link>
 				<Link to=''>About Us</Link>
-				<Link to=''>Blog</Link>
-				<Link to=''>Contact Us</Link>
-        <Link to='/login' className='btn btn-info'>
+				<NavLink to='/blog'>Blog</NavLink>
+				<NavLink to='/contact'>Contact Us</NavLink>
+				{
+					user ? <Link onClick={handleLogOur} className='btn btn-info'>
+					<button>Logout</button></Link> : <Link to='/login' className='btn btn-info'>
          <button>Login</button></Link>
+				}
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
@@ -40,6 +60,10 @@ const Navbar = () => {const navRef = useRef();
 				onClick={showNavbar}>
 				<FaBars />
 			</button>
+			{
+				error
+			}
+			<Toaster></Toaster>
 		</header>
 	);
 };

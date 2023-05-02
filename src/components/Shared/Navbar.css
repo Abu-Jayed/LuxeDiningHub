@@ -9,10 +9,15 @@
   font-family: 'Playfair Display', serif;
 }
 
+
+#sidebar a.active {
+  color: red;
+}
+
 :root {
 	--mainColor: #29335c;
 	--mainColorLight: #5767aa;
-	--secondaryColor: #db2b39;
+	/* --secondaryColor: #db2b39; */
 	--textColor: #eee;
 }
 
@@ -71,7 +76,7 @@ nav {
 		align-items: center;
 		justify-content: center;
 		gap: 1.2rem;
-		background-color: white;
+		background-color: red;
 		transition: 1.07s;
 	}
 

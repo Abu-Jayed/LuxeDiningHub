@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
+import Navbar from "../Shared/Navbar";
 
 const SingleChef = () => {
   const data = useLoaderData();
@@ -41,6 +42,9 @@ const SingleChef = () => {
   } = data;
   console.log(data);
   return (
+    <div>
+<Navbar></Navbar>
+
     <div className=" flex gap-10 bg-cyan-200 mx-auto mt-5">
       <div>
         <div className="w-[350px] ml-6 mb-9 mx-auto h-[550px] bg-black border-4 border-red-700 ">
@@ -147,6 +151,8 @@ const SingleChef = () => {
       </div>
       <Toaster></Toaster>
     </div>
+    </div>
+
   );
 };
 

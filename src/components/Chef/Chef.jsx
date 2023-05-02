@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ChefCard from "./ChefCard";
+import Navbar from "../Shared/Navbar";
 
 const Chef = () => {
   const [allChef,setAllChef] = useState([])
