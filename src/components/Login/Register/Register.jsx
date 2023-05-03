@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, redirect, useNavigate, useNavigation } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-hot-toast';
 import Navbar from '../../Shared/Navbar';
@@ -8,6 +8,8 @@ import Navbar from '../../Shared/Navbar';
 const Register = () => {
   const {user,createUser,updateUser} = useContext(AuthContext)
   const [error,setError] = useState('')
+  const navagate = useNavigate();
+
   const handleRegister = event =>{
 
     event.preventDefault();
@@ -31,11 +33,17 @@ const Register = () => {
       console.log(createdUser);
       setError('')
       toast.success('user created successfully.')
+
+      setTimeout(() => navagate('/'), 2000)
+
       updateUser(name,imgUrl)
-    })
-    .catch(err =>{
+      .then()
+      .catch(err => {
+        console.log(err);
+      })
+    }).catch(err => {
       console.log(err);
-      setError(err)
+      setError(err.message)
     })
   }
   return (

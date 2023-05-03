@@ -9,7 +9,7 @@ import { Toaster, toast } from "react-hot-toast";
 const Navbar = () => {
   const navRef = useRef();
 
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, photo } = useContext(AuthContext);
   const [error, setError] = useState("");
   const handleLogOur = () => {
     logOut()
@@ -25,15 +25,14 @@ const Navbar = () => {
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
-	// let theme = document.getElementById("theme");
-	
-	const handleChange = (event) => {
-		let type = event.target.value;
-		console.log(type);
-		let theme = document.getElementById("theme");
-		theme.setAttribute("data-theme",type)
+  // let theme = document.getElementById("theme");
 
-	}
+  const handleChange = (event) => {
+    let type = event.target.value;
+    console.log(type);
+    let theme = document.getElementById("theme");
+    theme.setAttribute("data-theme", type);
+  };
 
   return (
     <header>
@@ -63,24 +62,32 @@ const Navbar = () => {
             <button>Login</button>
           </Link>
         )}
+        {user?.photoURL ? (
+          <div>
+            <img title="Nice to meet you" className="rounded-full w-9 h-9" src={user.photoURL} alt="" />
+            <p>{user.displayName}</p>
+          </div>
+        ) : (
+          ""
+        )}
 
-				{/* theme start  */}
-        <select onChange={handleChange} className="select select-accent w-[20%] max-w-xs">
-          <option disabled>
-            Dark mode or light mode?
-          </option>
-          <option value='light'>Auto</option>
-          <option value='cupcake'>Cupcake</option>
-          <option value='autumn'>Autumn</option>
-          <option value='cyberpunk'>Cyberpunk</option>
-          <option value='valentine'>Valentine</option>
-          <option value='lemonade'>Lemonade</option>
-          <option value='aqua'>Aqua</option>
-          <option value='winter'>Winter</option>
-          <option value='retro'>Retro</option>
-
+        {/* theme start  */}
+        <select
+          onChange={handleChange}
+          className="select select-accent w-[20%] max-w-xs"
+        >
+          <option disabled>Dark mode or light mode?</option>
+          <option value="light">Auto</option>
+          <option value="cupcake">Cupcake</option>
+          <option value="autumn">Autumn</option>
+          <option value="cyberpunk">Cyberpunk</option>
+          <option value="valentine">Valentine</option>
+          <option value="lemonade">Lemonade</option>
+          <option value="aqua">Aqua</option>
+          <option value="winter">Winter</option>
+          <option value="retro">Retro</option>
         </select>
-				{/* theme end */}
+        {/* theme end */}
 
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />

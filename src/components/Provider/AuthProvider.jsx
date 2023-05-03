@@ -6,6 +6,7 @@ import app from '../../firebase/firebase.config';
 export  const AuthContext = createContext(null)
 const AuthProvider = ({children}) => {
   const [user,setUser] = useState(null)
+  const [photo,setPhoto] = useState('')
   const auth = getAuth(app);
 
     const [loading, setLoading] = useState(true)
@@ -24,6 +25,7 @@ const AuthProvider = ({children}) => {
             displayName: name,
             photoURL: imgUrl
           })
+          setPhoto(imgUrl)
     }
     const logOut = ()=>{
         setLoading(true)
@@ -50,7 +52,8 @@ const AuthProvider = ({children}) => {
     loginUser,
     updateUser,
     logOut,
-    loading
+    loading,
+    photo,
   }
   return (
     <AuthContext.Provider value={authInfo}>
