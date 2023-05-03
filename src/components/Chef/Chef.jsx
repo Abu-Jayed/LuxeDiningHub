@@ -14,13 +14,9 @@ const Chef = () => {
   return (
     <div className="mb-14 mt-28">
       <div className="text-center w-[60%] mx-auto">
-        <h1 className="text-5xl">Member's We Proude Of</h1>
-        <p className="mb-10">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat aliquam
-          amet, cursus tellus non consequat laoreet eget ornare. Tellus
-          vulputate tellus a, lobortis et nisl. Quisque vulputate eget et,
-          aliquet libero, porttitor luctus placerat. Neque, blandit neque proin
-          at ultrices odio.
+        <h1 className="font-bold text-5xl">Member's We Proude Of</h1>
+        <p className="mb-10 mt-2">
+        Our chef has passion for food and dedication to excellence has earned them a reputation as a <span className="font-semibold">skilled and innovative chef</span>  in the industry.Our menu is crafted with <span className="font-semibold">passion and purpose,</span>  using only the freshest, locally-sourced ingredients
         </p>
       </div>
       <div className='grid md:grid-cols-3'>
