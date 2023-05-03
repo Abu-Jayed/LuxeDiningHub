@@ -14,13 +14,13 @@ import Navbar from "../../Shared/Navbar";
 
 const auth = getAuth(app);
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser,user } = useContext(AuthContext);
   const [error, setError] = useState("");
 
   const navigate = useNavigate()
   const location = useLocation()
   // const from = location.state?.from?.pathName || "/chef/2";
-  const from = location.state?.from ;
+  const from = location.state?.from || '/' ;
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -35,13 +35,17 @@ const Login = () => {
         console.log(loggedUser);
         setError("");
         toast.success("user logged in successfully");
+        console.log(user);
+
 
         setTimeout(()=>{
           if(from){
               navigate(from)
+              console.log(user);
           }
           else{
               navigate('/')
+              console.log(user);
           }
       },2000)
       
@@ -62,6 +66,7 @@ const Login = () => {
         console.log(result.user);
         setError("");
         console.log(from);
+        console.log(user);
         navigate(from)
         // redirect(from)
 

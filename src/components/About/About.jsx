@@ -3,6 +3,9 @@ import Navbar from "../Shared/Navbar";
 import CustomersReview from "../CustomersReview/CustomersReview";
 import Footer from "../Shared/Footer";
 
+import { Link, NavLink } from "react-router-dom";
+import { FaBolt } from "react-icons/fa";
+
 const About = () => {
   const [member,setMember] = useState([])
 
@@ -20,10 +23,15 @@ const About = () => {
           src="https://chef-hero-src.netlify.app/img_3/about_bg.png"
           alt=""
         />
-        <div className="absolute top-24 left-[630px]">
+        <div className="absolute top-[170px] left-[630px]">
           <h1 className=" text-4xl text-yellow-500">About page</h1>
           <p className="absolute font-sebold left-[40px] text-white">
-            Home &gt; About
+            <NavLink to='/'>
+            Home &gt; 
+            </NavLink>
+            <NavLink to='/about' className='text-warning'>
+            About
+            </NavLink>
           </p>
         </div>
       </div>

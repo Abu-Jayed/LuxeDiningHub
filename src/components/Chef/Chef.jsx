@@ -19,7 +19,7 @@ const Chef = () => {
         Our chef has passion for food and dedication to excellence has earned them a reputation as a <span className="font-semibold">skilled and innovative chef</span>  in the industry.Our menu is crafted with <span className="font-semibold">passion and purpose,</span>  using only the freshest, locally-sourced ingredients
         </p>
       </div>
-      <div className='grid md:grid-cols-3'>
+      <div className='grid md:grid-cols-3 max-w-[1300px] mx-auto'>
         {
           allChef.map(chef => <ChefCard
           key={chef.id}

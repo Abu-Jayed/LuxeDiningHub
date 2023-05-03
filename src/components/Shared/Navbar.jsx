@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaUser } from "react-icons/fa";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
@@ -47,9 +47,9 @@ const Navbar = () => {
           Home
         </NavLink>
 
-        <Link onClick={() => changeTheme()} to="">
+        <NavLink to="/order">
           Order Online
-        </Link>
+        </NavLink>
         <NavLink to="/about">About Us</NavLink>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/contact">Contact Us</NavLink>
@@ -64,12 +64,18 @@ const Navbar = () => {
         )}
         {user?.photoURL ? (
           <div>
-            <img title="Nice to meet you" className="rounded-full w-9 h-9" src={user.photoURL} alt="" />
+            <img
+              title={user.displayName}
+              className="rounded-full w-9 h-9"
+              src={user.photoURL}
+              alt=""
+            />
             <p>{user.displayName}</p>
           </div>
         ) : (
-          ""
+          <FaUser title="user" className="w-10 h-10"></FaUser>
         )}
+        {console.log(user)}
 
         {/* theme start  */}
         <select
@@ -96,7 +102,12 @@ const Navbar = () => {
       <button className="nav-btn" onClick={showNavbar}>
         <FaBars />
       </button>
-      {error}
+      {/* <div className="text-blue-700">
+      <h1 className="text-red-700">{error}</h1>
+      </div> */}
+      <div>
+        <p className="text-red-600">{error}</p>
+      </div>
       <Toaster></Toaster>
     </header>
   );

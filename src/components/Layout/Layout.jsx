@@ -7,6 +7,7 @@ import Slider from '../Slider/Slider';
 import Chef from '../Chef/Chef';
 import CustomersReview from '../CustomersReview/CustomersReview';
 import Header from '../Header/Header';
+import Services from '../Shared/Services';
 
 const Layout = () => {
   return (
@@ -15,6 +16,7 @@ const Layout = () => {
       <Header></Header>
       <Slider></Slider>
       <Chef></Chef>
+      <Services></Services>
       <Outlet></Outlet>
       <CustomersReview></CustomersReview>
       <Footer></Footer>

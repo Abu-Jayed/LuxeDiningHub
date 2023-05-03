@@ -9,6 +9,7 @@ import Contact from "../Contact/Contact";
 import Blog from "../Blog/Blog";
 import PrivetRoute from "./PrivetRoute";
 import About from "../About/About";
+import Order from "../Order/Order";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: '/about',
     element: <About></About>
+  },
+  {
+    path: '/order',
+    element: <Order></Order>
   }
 ]);
 

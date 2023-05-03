@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHeart } from "react-icons/fa";
+import { FaArrowRight, FaHeart } from "react-icons/fa";
 import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 import pan from "../../assets/icons8-pan-60.png";
@@ -16,7 +16,7 @@ const ChefCard = ({ chef }) => {
   // console.log(id);
   return (
     <div className="mb-24">
-      <div className="w-[320px] mb-9 mx-auto shadow-md hover:shadow-2xl h-[490px] bg-black rounded-xl ">
+      <div className="w-[320px] mx-auto shadow-md hover:shadow-2xl h-[490px] rounded-xl bg-black bg-opacity-[0.87]">
         <LazyLoad
           height={300}
           offset={300}
@@ -26,15 +26,15 @@ const ChefCard = ({ chef }) => {
           }}
         >
           <img
-            className="rounded-b-2xl mb-10 w-80 mx-auto border-2 border-black rounded-xl"
+            className="rounded-b-2xl w-80 border-2 border-black rounded-xl"
             src={img}
             alt=""
           />
         </LazyLoad>
 
         <div className="mb-2 mt-5 w-[90%] mx-auto text-yellow-500 gap-3  border-2 bg-yellow bg-opacity-50 border-yellow-600 rounded-lg p-2 ">
-          <p className="text-4xl text-yellow-400 mb-3">{chef_name}</p>
-          <div className="flex items-center justify-between">
+          <p className="text-4xl font-bold  mb-3">{chef_name}</p>
+          <div className="text-orange-400 font-semibold text-lg flex items-center justify-between">
             <div>
               <p>{year_of_experience}+ years of exp...</p>
             </div>
@@ -48,12 +48,12 @@ const ChefCard = ({ chef }) => {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className=" bg-gray-600 bg-opacity-[0.16] rounded-xl pb-3">
           <Link
             to={`/chef/${id}`}
-            className="btn bg-orange-400 mt-1 ml-44 hover:bg-orange-500"
+            className=" btn text-gray-100 font-semibold bg-yellow-500 mt-1 ml-20  hover:bg-yellow-400 hover:text-gray-50"
           >
-            View Recipe
+            View Recipe&nbsp;&nbsp; <FaArrowRight></FaArrowRight>
           </Link>
         </div>
       </div>
