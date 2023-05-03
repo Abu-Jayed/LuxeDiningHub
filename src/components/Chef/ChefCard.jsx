@@ -15,8 +15,8 @@ const ChefCard = ({ chef }) => {
   } = chef;
   console.log(id);
   return (
-    <div>
-      <div className="w-[320px] mb-9 mx-auto shadow-md hover:shadow-2xl h-[480px] bg-black rounded-xl">
+    <div className="">
+      <div className="w-[320px] mb-9 mx-auto shadow-md hover:shadow-2xl h-[490px] bg-black rounded-xl ">
         <LazyLoad
           height={300}
           offset={300}
@@ -32,8 +32,8 @@ const ChefCard = ({ chef }) => {
           />
         </LazyLoad>
 
-        <div className="mt-5 w-[90%] mx-auto text-yellow-500 gap-3  border-2 bg-yellow bg-opacity-50 border-yellow-600 rounded-lg p-2 ">
-          <p className="text-4xl text-yellow-400">{chef_name}</p>
+        <div className="mb-2 mt-5 w-[90%] mx-auto text-yellow-500 gap-3  border-2 bg-yellow bg-opacity-50 border-yellow-600 rounded-lg p-2 ">
+          <p className="text-4xl text-yellow-400 mb-3">{chef_name}</p>
           <div className="flex items-center justify-between">
             <div>
               <p>{year_of_experience}+ years of exp...</p>
@@ -48,9 +48,14 @@ const ChefCard = ({ chef }) => {
             </div>
           </div>
         </div>
-        <Link to={`/chef/${id}`} className="btn bg-orange-400 mt-2 ml-44 hover:bg-orange-500">
-          View Recipe
-        </Link>
+        <div className="">
+          <Link
+            to={`/chef/${id}`}
+            className="btn bg-orange-400 mt-1 ml-44 hover:bg-orange-500"
+          >
+            View Recipe
+          </Link>
+        </div>
       </div>
     </div>
   );

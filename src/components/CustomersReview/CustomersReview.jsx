@@ -4,15 +4,18 @@ import { Fade } from "react-slideshow-image";
 
 const CustomersReview = () => {
   const images = [
-    "https://assets.website-files.com/6230285868f0fb5be2ef42be/623d60afa817df436f415875_Team1.png",
+    "https://chef-hero-src.netlify.app/img_2/review_1.png",
 
-    "https://assets.website-files.com/6230285868f0fb5be2ef42be/623d605f9163fb8b16edd942_Team3.png",
+    "https://chef-hero-src.netlify.app/img_2/review_2.png",
 
     "https://assets.website-files.com/6230285868f0fb5be2ef42be/623d607dfcf0c6a8537ebb8c_Team7.png",
   ];
   return (
     <div>
-      <div className="hover:shadow-md  border-red-300 mt-10 mb-20 md:w-[90%] mx-auto">
+      <div className="">
+      <h1 className="mx-auto md:text-5xl font-semibold md:ml-52 md:mt-32">What our customers and visitor are saying...</h1>
+      </div>
+      <div className="hover:shadow-md  border-red-300 md:mt-10 mb-20 md:w-[90%] mx-auto">
         <div className="w-96 md:w-[1000px]">
           <Fade>
             <div className="p-10 each-slide">
@@ -21,9 +24,8 @@ const CustomersReview = () => {
               </div>
               <div>
                 <h1 className="text-2xl lg:text-4xl">
-                  “Thanks to vinovest I can now invest in something i am
-                  passionate ”
-                  <small className="text-2xl">Makenna Weinstein</small>
+                  “This restaurant exceeded all my expectations - the food was outstanding and the service was top-notch. Highly recommend! ”
+                  <small className="text-2xl">kang the conquror</small>
                 </h1>
               </div>
             </div>
@@ -33,9 +35,8 @@ const CustomersReview = () => {
               </div>
               <div>
                 <h1 className="text-2xl lg:text-4xl">
-                  “Thanks to vinovest I can now invest in something i am
-                  passionate ”
-                  <small className="text-2xl">Makenna Weinstein</small>
+                  “The service was exceptional and the atmosphere was cozy and inviting. I will definitely be returning to this restaurant soon! ”
+                  <small className="text-2xl">Dan Scout</small>
                 </h1>
               </div>
             </div>
@@ -45,9 +46,8 @@ const CustomersReview = () => {
               </div>
               <div>
                 <h1 className="text-2xl lg:text-4xl">
-                  “Thanks to vinovest I can now invest in something i am
-                  passionate ”
-                  <small className="text-2xl">Makenna Weinstein</small>
+                  “The food at this restaurant is absolutely divine - every dish is bursting with flavor and expertly crafted. I cannot recommend it enough!”
+                  <small className="text-2xl">Angelena Jole</small>
                 </h1>
               </div>
             </div>

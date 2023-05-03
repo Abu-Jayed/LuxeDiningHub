@@ -9,11 +9,11 @@ import chefImg from "../../assets/1131009_OQ5CLB0.jpg";
 
 const Slider = () => {
   const images = [
-    "https://assets.website-files.com/6230285868f0fb5be2ef42be/6234268ea897414790643e14_Blog%20Image5.png",
+    "https://chef-hero-src.netlify.app/img/slider1.png",
 
     "https://assets.website-files.com/622ae0dc1c5d7674e36a2e37/625fe53ff747636a76639765_service1.png",
 
-    "https://assets.website-files.com/6230285868f0fb5be2ef42be/6231d1734dfaca4f598962cc_Blog%20Image3.png",
+    "https://chef-hero-src.netlify.app/img/burger1.png",
   ];
 
   return (
