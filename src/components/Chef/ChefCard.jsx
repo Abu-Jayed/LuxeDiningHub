@@ -13,9 +13,9 @@ const ChefCard = ({ chef }) => {
     number_of_recipe,
     number_of_likes,
   } = chef;
-  console.log(id);
+  // console.log(id);
   return (
-    <div className="">
+    <div className="mb-24">
       <div className="w-[320px] mb-9 mx-auto shadow-md hover:shadow-2xl h-[490px] bg-black rounded-xl ">
         <LazyLoad
           height={300}

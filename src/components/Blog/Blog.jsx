@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Shared/Navbar";
 import { FaDownload } from "react-icons/fa";
 import pdf from './Blog.pdf'
+import Footer from "../Shared/Footer";
 
 const Blog = () => {
   return (
@@ -12,7 +13,7 @@ const Blog = () => {
           Download <FaDownload></FaDownload>
         </a>
       </section>
-      <section className="md:mx-auto mt-20 grid md:grid-cols-2  md:w-[900px] md:h-[400px] border-gray-500  gap-1 mb-10">
+      <section className="md:mx-auto mt-20 grid md:grid-cols-2  md:w-[900px] md:h-[400px] border-gray-500  gap-1 mb-36">
         {/* modal container-1 */}
         <div className="md:w-[420px] shadow-lg md:m-3 md:h-52 rounded-lg border border-gray-300 p-3">
           <h1 className="text-4xl font-bold">
@@ -170,6 +171,7 @@ const Blog = () => {
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </section>
   );
 };

@@ -51,7 +51,7 @@ const Navbar = () => {
         <Link onClick={() => changeTheme()} to="">
           Order Online
         </Link>
-        <Link to="">About Us</Link>
+        <NavLink to="/about">About Us</NavLink>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/contact">Contact Us</NavLink>
         {user ? (

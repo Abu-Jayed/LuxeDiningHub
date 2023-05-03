@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "image": "https://chef-hero-src.netlify.app/img/chef-1.png",
+    "name": "John Smith",
+    "job_title": "Head Chef"
+  },
+  {
+    "id": 2,
+    "image": "https://chef-hero-src.netlify.app/img/chef-2.png",
+    "name": "Jane Doe",
+    "job_title": "Sous Chef"
+  },
+  {
+    "id": 3,
+    "image": "https://chef-hero-src.netlify.app/img/chef-3.png",
+    "name": "Mike Johnson",
+    "job_title": "Server"
+  },
+  {
+    "id": 4,
+    "image": "https://chef-hero-src.netlify.app/img/chef-4.png",
+    "name": "Lisa Lee",
+    "job_title": "Bartender"
+  },
+  {
+    "id": 5,
+    "image": "https://chef-hero-src.netlify.app/img/chef-5.png",
+    "name": "David Brown",
+    "job_title": "Host"
+  },
+  {
+    "id": 6,
+    "image": "https://chef-hero-src.netlify.app/img/chef-6.png",
+    "name": "Emily Green",
+    "job_title": "Pastry Chef"
+  },
+  {
+    "id": 7,
+    "image": "https://chef-hero-src.netlify.app/img/chef-7.png",
+    "name": "Tommy Anderson",
+    "job_title": "Line Cook"
+  },
+  {
+    "id": 8,
+    "image": "https://chef-hero-src.netlify.app/img/chef-8.png",
+    "name": "Maria Rodriguez",
+    "job_title": "Manager"
+  }
+  
+]

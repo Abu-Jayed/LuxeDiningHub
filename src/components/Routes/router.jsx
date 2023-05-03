@@ -8,6 +8,7 @@ import ErrorPage from "../Shared/ErrorPage";
 import Contact from "../Contact/Contact";
 import Blog from "../Blog/Blog";
 import PrivetRoute from "./PrivetRoute";
+import About from "../About/About";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: '/blog',
     element: <Blog></Blog>
+  },
+  {
+    path: '/about',
+    element: <About></About>
   }
 ]);
 
