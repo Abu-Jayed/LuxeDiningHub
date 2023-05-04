@@ -3,15 +3,17 @@ import Navbar from "../Shared/Navbar";
 import { FaDownload } from "react-icons/fa";
 import pdf from './Blog.pdf'
 import Footer from "../Shared/Footer";
+import PDFFile from "../PDFFile/PDFFile";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 
 const Blog = () => {
   return (
     <section>
       <Navbar></Navbar>
       <section className="flex w-full mt-2 pr-5 flex-row-reverse">
-        <a href={pdf} download='pdf file' className="flex items-center gap-2">
-          Download <FaDownload></FaDownload>
-        </a>
+        <PDFDownloadLink document={<PDFFile></PDFFile>} fileName="FORM">
+        {({loading}) => (loading ? <button>Loading Document...</button> : <button>Download</button> )}
+        </PDFDownloadLink>
       </section>
       <section className="md:mx-auto mt-20 grid md:grid-cols-2  md:w-[900px] md:h-[400px] border-gray-500  gap-1 mb-36">
         {/* modal container-1 */}
