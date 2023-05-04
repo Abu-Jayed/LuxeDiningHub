@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const handleChange = (event) => {
     let type = event.target.value;
-    console.log(type);
+    // console.log(type);
     let theme = document.getElementById("theme");
     theme.setAttribute("data-theme", type);
   };
@@ -59,7 +59,7 @@ const Navbar = () => {
         <NavLink to="/about">About Us</NavLink>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/contact">Contact Us</NavLink>
-        {console.log(user)}
+        {/* {console.log(user)} */}
 
         {/* theme start  */}
         <select
@@ -107,7 +107,8 @@ const Navbar = () => {
             <p>{user.displayName}</p>
           </div>
         ) : (
-          <FaUser title="user" className="w-10 h-10"></FaUser>
+          // <FaUser title="user" className="w-10 h-10"></FaUser>
+          ""
         )}
       <div>
         <p className="text-red-600">{error}</p>

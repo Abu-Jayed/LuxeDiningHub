@@ -12,7 +12,9 @@ const Blog = () => {
       <Navbar></Navbar>
       <section className="flex w-full mt-2 pr-5 flex-row-reverse">
         <PDFDownloadLink document={<PDFFile></PDFFile>} fileName="FORM">
-        {({loading}) => (loading ? <button>Loading Document...</button> : <button>Download</button> )}
+        {({loading}) => (loading ? <button>Loading Document...</button> : <div className=" flex items-center gap-2">
+        <button className="font-bold ">Download</button> <FaDownload></FaDownload>
+        </div> )}
         </PDFDownloadLink>
       </section>
       <section className="md:mx-auto mt-20 grid md:grid-cols-2  md:w-[900px] md:h-[400px] border-gray-500  gap-1 mb-36">

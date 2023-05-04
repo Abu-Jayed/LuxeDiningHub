@@ -18,19 +18,20 @@ const Register = () => {
     const imgUrl = form.img.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name,imgUrl,email,password);
+    form.reset()
+    // console.log(name,imgUrl,email,password);
 
     if(email == password){
       return setError('email and password can not be same')
     } else if(password.length < 6){
       return setError('password must have 6 charectar')
     }
-    console.log('validation pass');
+    // console.log('validation pass');
 
     createUser(email,password)
     .then(result =>{
       const createdUser = result.user;
-      console.log(createdUser);
+      // console.log(createdUser);
       setError('')
       toast.success('user created successfully.')
 
@@ -39,10 +40,10 @@ const Register = () => {
       updateUser(name,imgUrl)
       .then()
       .catch(err => {
-        console.log(err);
+        // console.log(err);
       })
     }).catch(err => {
-      console.log(err);
+      // console.log(err);
       setError(err.message)
     })
   }

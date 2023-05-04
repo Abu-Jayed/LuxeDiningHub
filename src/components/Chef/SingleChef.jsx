@@ -45,7 +45,7 @@ const SingleChef = () => {
     recipe_img2,
     recipe_img3,
   } = data;
-  console.log(data);
+  // console.log(data);
   return (
     <div>
       <Navbar></Navbar>

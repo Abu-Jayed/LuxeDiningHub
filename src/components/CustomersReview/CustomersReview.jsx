@@ -15,7 +15,7 @@ const CustomersReview = () => {
       <div className="">
       <h1 className="mx-auto md:text-5xl font-semibold md:ml-52">What our customers and visitor are saying...</h1>
       </div>
-      <div className="hover:shadow-md  border-red-300 md:mt-10 mb-20 md:w-[90%] mx-auto">
+      <div className="hover:shadow-2xl  border-red-300  md:mt-10 mb-20 md:w-[70%] mx-auto">
         <div className="w-96 md:w-[1000px]">
           <Fade>
             <div className="p-10 each-slide">

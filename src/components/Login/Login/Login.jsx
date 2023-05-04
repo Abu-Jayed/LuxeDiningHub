@@ -27,32 +27,33 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    form.reset()
 
 
     loginUser(email, password)
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+        // console.log(loggedUser);
         setError("");
         toast.success("user logged in successfully");
-        console.log(user);
+        // console.log(user);
 
 
         setTimeout(()=>{
           if(from){
               navigate(from)
-              console.log(user);
+              // console.log(user);
           }
           else{
               navigate('/')
-              console.log(user);
+              // console.log(user);
           }
       },2000)
       
         // navigate(from,{replace:true})
       })
       .catch((err) => {
-        console.log(err.message);
+        // console.log(err.message);
         setError(err.message);
       });
   };
@@ -63,16 +64,16 @@ const Login = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         toast.success("sign in with google successfully");
-        console.log(result.user);
+        // console.log(result.user);
         setError("");
-        console.log(from);
-        console.log(user);
+        // console.log(from);
+        // console.log(user);
         navigate(from)
         // redirect(from)
 
       })
       .catch((err) => {
-        console.log(err.message);
+        // console.log(err.message);
         setError(err.message);
       });
   };
@@ -83,13 +84,13 @@ const Login = () => {
     const gitProvider = new GithubAuthProvider();
     signInWithPopup(auth, gitProvider)
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         setError("");
         toast.success("login in with github successfull");
         navigate(from)
       })
       .catch((err) => {
-        console.log(err.message);
+        // console.log(err.message);
         setError(err.message);
       });
   };

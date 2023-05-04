@@ -7,17 +7,17 @@ import { Link, NavLink, useNavigate, useNavigation } from "react-router-dom";
 import { FaBolt } from "react-icons/fa";
 
 const About = () => {
-  const [member,setMember] = useState([])
-  const navigatation = useNavigation()
-  if(navigatation.state === 'loading'){
-    console.log('loadin from about page line 13');
+  const [member, setMember] = useState([]);
+  const navigatation = useNavigation();
+  if (navigatation.state === "loading") {
+    console.log("loadin from about page line 13");
   }
 
-  useEffect(()=>{
-    fetch('../../../public/member.json')
-    .then(res =>res.json())
-    .then(data => setMember(data))
-  },[])
+  useEffect(() => {
+    fetch("../../../public/member.json")
+      .then((res) => res.json())
+      .then((data) => setMember(data));
+  }, []);
   return (
     <section>
       <Navbar></Navbar>
@@ -30,11 +30,9 @@ const About = () => {
         <div className="absolute top-[170px] left-[630px]">
           <h1 className=" text-4xl text-yellow-500">About page</h1>
           <p className="absolute font-sebold left-[40px] text-white">
-            <NavLink to='/'>
-            Home &gt; 
-            </NavLink>
-            <NavLink to='/about' className='text-warning'>
-            About
+            <NavLink to="/">Home &gt;</NavLink>
+            <NavLink to="/about" className="text-warning">
+              About
             </NavLink>
           </p>
         </div>
@@ -46,12 +44,18 @@ const About = () => {
         <div className="">
           <p className="w-[900px] ml-80 mt-10">
             At our restaurant, we strive to provide an exceptional dining
-            experience that is unmatched in quality and service. Our team of
-            dedicated professionals is committed to ensuring that every guest
-            receives personalized attention and leaves with a smile."From the
-            moment you step in, our warm and welcoming staff will cater to your
-            every need, making your visit a memorable one. We offer a range of
-            services including catering, private dining, and event hosting,
+            experience that is{" "}
+            <span className="text-red-400">unmatched in quality</span> and
+            service. Our team of dedicated professionals is committed to
+            ensuring that every guest receives{" "}
+            <span className="font-semibold">personalized attention</span> and
+            leaves with a <span className="text-green-700"> smile</span>."From
+            the moment you step in, our warm and welcoming staff will cater to
+            your every need, making your visit a memorable one. We offer a range
+            of services including{" "}
+            <span className="font-semibold">
+              catering, private dining, and event hosting,
+            </span>
             ensuring that your special occasions are unforgettable.
           </p>
         </div>
@@ -86,10 +90,12 @@ const About = () => {
         <h1 className="mt-20 text-5xl text-center">Our Vision & Mission</h1>
         <p className="w-[900px] mx-auto text-center mb-20 mt-5">
           Our mission and vision is to be recognized as a leading culinary
-          destination, offering a menu that showcases the finest flavors from
-          around the world. We aim to create a warm and welcoming atmosphere
-          that fosters community and celebrates the art of dining. By staying
-          true to our values of quality, creativity, and hospitality, we hope to
+          destination, offering a menu that showcases the{" "}
+          <span className="text-green-800 font-semibold">finest flavors</span>{" "}
+          from around the world. We aim to create a warm and welcoming
+          atmosphere that fosters community and celebrates the{" "}
+          <span className="font-semibold">art of dining</span>. By staying true
+          to our values of quality, creativity, and hospitality, we hope to
           inspire and delight our guests, one dish at a time.
         </p>
       </div>
@@ -143,24 +149,33 @@ const About = () => {
         <h1 className="text-center text-5xl">Meet Our Team Members</h1>
         <div>
           <p className="ml-72 mt-5 mb-20 text-center w-[800px]">
-            orem ipsum dolor sit amet, consectetur adipiscing elit. Erat aliquam
-            amet, cursus tellus non consequat laoreet eget ornare. Tellus
-            vulputate tellus a, lobortis et nisl. Quisque vulputate eget et,
-            aliquet libero, porttitor luctus placerat. Neque, blandit neque
-            proin at ultrices odio.
+            Introducing our <span className="font-semibold text-red-700">exceptional</span> restaurant team, who work tirelessly to
+            provide you with an unparalleled dining experience. Our skilled
+            chefs use their expertise to create <span className="text-green-800 font-semibold">delectable</span> dishes, while our
+            friendly waitstaff ensures that you receive <span className="text-orange-700 font-semibold">top-notch service</span> 
+              &nbsp; throughout your meal. From the kitchen to the dining room, our team
+            takes pride in delivering excellence to every customer who walks
+            through our doors.
           </p>
         </div>
       </div>
       <div className="grid grid-cols-4 gap-5 mx-auto ml-10">
-        {
-          member.map(person => {
-            return <div className="w-[320px] mb-9 mx-auto shadow-md hover:shadow-2xl h-[400px] bg-black rounded-xl" key={person.id}>
-              <img className="rounded-b-2xl mb-3 w-80 mx-auto border-2 border-black rounded-xl" src={person.image} alt="" />
+        {member.map((person) => {
+          return (
+            <div
+              className="w-[320px] mb-9 mx-auto shadow-md hover:shadow-2xl h-[400px] bg-black rounded-xl"
+              key={person.id}
+            >
+              <img
+                className="rounded-b-2xl mb-3 w-80 mx-auto border-2 border-black rounded-xl"
+                src={person.image}
+                alt=""
+              />
               <p className="text-yellow-400 text-4xl ml-8">{person.name}</p>
               <p className="text-yellow-400 ml-8">{person.job_title}</p>
             </div>
-          })
-        }
+          );
+        })}
       </div>
       <div>
         <h1 className="text-5xl text-center mb-4 mt-24">Review_</h1>

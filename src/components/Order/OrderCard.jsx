@@ -33,7 +33,7 @@ const OrderCard = ({ chef }) => {
                 {detail}
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+                <button className="btn btn-warning">Order Now</button>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ const OrderCard = ({ chef }) => {
               <h2 className="card-title">{recipe_names[1]}</h2>
               <p>{detail2}</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+                <button className="btn btn-warning">Order Now</button>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ const OrderCard = ({ chef }) => {
               <h2 className="card-title">{recipe_names[2]}</h2>
               <p>{detail3}</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+                <button className="btn btn-warning">Order Now</button>
               </div>
             </div>
           </div>

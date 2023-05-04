@@ -15,7 +15,11 @@ const DisplayUserData = () => {
         <div className="card w-96 bg-orange-200 shadow-2xl  mt-20 mx-auto">
           <div className="card-body">
             <h2 className="card-title">Welcome, {user?.displayName}</h2>
-            <p className="ml-14">Your Email: {user?.email}</p>
+            <p className="ml-14">Your Email: <br /> 
+            {
+              user ? user?.email : 'please login'
+            }
+            </p>
           </div>
           <figure>
             <img
@@ -24,7 +28,9 @@ const DisplayUserData = () => {
               alt="your img not found"
             />
           </figure>
-          <small className="">this img is beautiful</small>
+          {user &&
+            <small className="">this img is beautiful</small>
+          }
         </div>
       </div>
       <div>
