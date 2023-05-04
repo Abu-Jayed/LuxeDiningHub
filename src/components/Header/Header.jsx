@@ -14,10 +14,8 @@ const Header = () => {
         THE FINEST QUALITY NATRULE FOOD.
       </h1>
 
-      <p className="absolute md:w-[550px] text-sm top-[473px] w-[285px] md:font-semibold md:top-[560px] md:left-[110px] md:text-xl ">
-        Our target good service sit amet, consectetur adipiscing elit. Non quam
-        magna vulputate aliquam, felis, aliquam eget ipsum fringilla. Aliquam
-        enim arcu, feugiat cursus purus, elementum faucibus purus.
+      <p className="absolute md:w-[550px] text-sm top-[473px] w-[285px] md:font-semibold md:top-[560px] md:left-[110px] md:text-xl md:mt-2 ">
+      Our commitment to exceptional service and quality ingredients will make your visit an unforgettable one.Exquisite Dining Experience: Our Restaurant's Target to Delight Your Taste Buds and Satisfy Your Cravings
       </p>
 
       <img

@@ -59,29 +59,6 @@ const Navbar = () => {
         <NavLink to="/about">About Us</NavLink>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/contact">Contact Us</NavLink>
-        {user ? (
-          <Link onClick={handleLogOur} className="btn btn-info">
-            <button>Logout</button>
-          </Link>
-        ) : (
-          <Link to="/login" className="btn btn-info">
-            <button>Login</button>
-          </Link>
-        )}
-        {user?.photoURL ? (
-          <div>
-            <img
-              title={user.displayName}
-              className="rounded-full w-9 h-9"
-              src={user.photoURL}
-              alt=""
-              onClick={handleDisplay}
-            />
-            <p>{user.displayName}</p>
-          </div>
-        ) : (
-          <FaUser title="user" className="w-10 h-10"></FaUser>
-        )}
         {console.log(user)}
 
         {/* theme start  */}
@@ -109,9 +86,29 @@ const Navbar = () => {
       <button className="nav-btn" onClick={showNavbar}>
         <FaBars />
       </button>
-      {/* <div className="text-blue-700">
-      <h1 className="text-red-700">{error}</h1>
-      </div> */}
+      {user ? (
+          <Link onClick={handleLogOur} className="btn btn-info">
+            <button>Logout</button>
+          </Link>
+        ) : (
+          <Link to="/login" className="btn btn-info">
+            <button>Login</button>
+          </Link>
+        )}
+        {user?.photoURL ? (
+          <div>
+            <img
+              title={user.displayName}
+              className="rounded-full w-9 h-9"
+              src={user.photoURL}
+              alt=""
+              onClick={handleDisplay}
+            />
+            <p>{user.displayName}</p>
+          </div>
+        ) : (
+          <FaUser title="user" className="w-10 h-10"></FaUser>
+        )}
       <div>
         <p className="text-red-600">{error}</p>
       </div>

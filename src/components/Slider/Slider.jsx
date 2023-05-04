@@ -53,7 +53,7 @@ const Slider = () => {
             We are a mexican restaurant makes delicious.
           </h1>
           <p className="w-80 md:mb-4 lg:w-auto">
-            <span className="font-semibold">Come hungry, leave happy - </span>
+            <span className="font-semibold">Come <span className="text-red-700">hungry</span> , leave <span className="text-green-700">happy</span>  - </span>
             that's our promise to you! Where every bite is a masterpiece and
             every meal is a celebration.
           </p>
