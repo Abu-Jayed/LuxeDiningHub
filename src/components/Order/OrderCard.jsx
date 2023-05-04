@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const OrderCard = ({ chef }) => {
-  const { id, recipe_img1, recipe_img2, recipe_img3, recipe_names } = chef;
+  const { id, recipe_img1, recipe_img2, recipe_img3, recipe_names,detail,detail2,detail3, } = chef;
   const [recepiTitle,setRecepiTitle] = useState([])
 
   useEffect(()=>{
@@ -30,7 +30,7 @@ const OrderCard = ({ chef }) => {
             <div className="card-body">
               <h2 className="card-title">{recipe_names[0]}</h2>
               <p>
-                dynamic data will be added on day.
+                {detail}
               </p>
               <div className="card-actions justify-end">
                 <button className="btn btn-primary">Buy Now</button>
@@ -43,7 +43,7 @@ const OrderCard = ({ chef }) => {
             </figure>
             <div className="card-body">
               <h2 className="card-title">{recipe_names[1]}</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>{detail2}</p>
               <div className="card-actions justify-end">
                 <button className="btn btn-primary">Buy Now</button>
               </div>
@@ -55,7 +55,7 @@ const OrderCard = ({ chef }) => {
             </figure>
             <div className="card-body">
               <h2 className="card-title">{recipe_names[2]}</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>{detail3}</p>
               <div className="card-actions justify-end">
                 <button className="btn btn-primary">Buy Now</button>
               </div>

@@ -25,7 +25,7 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="w-370px md:w-[1111px] mx-auto rounded-lg grid md:grid-cols-4 grid-cols-1 md:gap-4 md:ml-0 ml-20 ">
+      <div className="w-370px md:w-[1111px] mx-auto rounded-lg grid md:grid-cols-4 grid-cols-1 md:gap-4 md:ml-44 ml-20 ">
         <div className="bg-green-50 w-56 rounded-xl mt-4 mb-5">
           <img
             className="ml-10 mt-4 rounded-xl w-32 "
