@@ -3,11 +3,15 @@ import Navbar from "../Shared/Navbar";
 import CustomersReview from "../CustomersReview/CustomersReview";
 import Footer from "../Shared/Footer";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate, useNavigation } from "react-router-dom";
 import { FaBolt } from "react-icons/fa";
 
 const About = () => {
   const [member,setMember] = useState([])
+  const navigatation = useNavigation()
+  if(navigatation.state === 'loading'){
+    console.log('loadin from about page line 13');
+  }
 
   useEffect(()=>{
     fetch('../../../public/member.json')

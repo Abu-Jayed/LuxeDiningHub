@@ -19,7 +19,7 @@ const Slider = () => {
   return (
     <div className="max-w-xs md:max-w-none">
       <div className="hover:shadow-md shadow-sm  border-red-300 mt-10 mb-20 bg-orange-00  w-[380px] md:w-[90%] md:mx-auto grid md:grid-cols-2 justify-between items-center ">
-        <div className="w-[400px] md:w-[550px]">
+        <div className="w-[370px] md:w-[550px]">
           <Fade>
             <div className="each-slide">
               <div>
@@ -40,7 +40,7 @@ const Slider = () => {
             <div className="each-slide">
               <div>
                 <img
-                  className="ml-10 md:ml-0 w-[500px] lg:w-[550px]"
+                  className="ml-10 md:ml-0 w-[480px] lg:w-[550px]"
                   src={images[2]}
                 />
               </div>

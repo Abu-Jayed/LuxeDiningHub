@@ -42,7 +42,7 @@ const Navbar = () => {
           <h3>Chef Hero</h3>
         </Link>
       </div>
-      <nav id="sidebar" className="bg-slate-50" ref={navRef}>
+      <nav id="sidebar" className=" bg-slate-50" ref={navRef}>
         <NavLink to="/" className="">
           Home
         </NavLink>

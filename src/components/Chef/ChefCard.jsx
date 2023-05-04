@@ -1,10 +1,19 @@
 import React from "react";
 import { FaArrowRight, FaHeart } from "react-icons/fa";
 import LazyLoad from "react-lazy-load";
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import pan from "../../assets/icons8-pan-60.png";
 
 const ChefCard = ({ chef }) => {
+  const navigatation = useNavigation()
+  if(navigatation.state === 'loading'){
+    return <div
+    className="  mx-auto ml-[46%] mt-[16%] radial-progress bg-primary text-primary-content border-4 border-primary h-32 w-32"
+    style={{ "--value": 70 }}
+  >
+    Loading 70%
+  </div>
+  }
   const {
     id,
     img,

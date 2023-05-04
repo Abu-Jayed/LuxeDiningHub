@@ -8,7 +8,7 @@ const Services = () => {
         <h1 className="text-yellow-500 font-semibold text-center text-6xl">
           Our Service's
         </h1>
-        <p className="w-[900px] text-center mx-auto font-semibold text-gray-600 tracking-widest ">
+        <p className="md:w-[900px] w-[300px] text-center mx-auto font-semibold text-gray-600 tracking-widest ">
           Our restaurant company is{" "}
           <span className="text-red-300 font-bold">committed</span> to providing{" "}
           <span className="text-red-300 font-bold">exceptional service</span> to
@@ -25,7 +25,7 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="w-[1111px] mx-auto rounded-lg grid grid-cols-4 gap-4">
+      <div className="w-370px md:w-[1111px] mx-auto rounded-lg grid md:grid-cols-4 grid-cols-1 md:gap-4 md:ml-0 ml-20 ">
         <div className="bg-green-50 w-56 rounded-xl mt-4 mb-5">
           <img
             className="ml-10 mt-4 rounded-xl w-32 "
