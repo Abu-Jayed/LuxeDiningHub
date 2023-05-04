@@ -3,14 +3,16 @@ import { useRef } from "react";
 import { FaBars, FaTimes, FaUser } from "react-icons/fa";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Toaster, toast } from "react-hot-toast";
+import DisplayUserData from "./DisplayUserData";
 const Navbar = () => {
   const navRef = useRef();
 
   const { user, logOut, photo } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const navigate = useNavigate()
   const handleLogOur = () => {
     logOut()
       .then(() => {
@@ -33,6 +35,10 @@ const Navbar = () => {
     let theme = document.getElementById("theme");
     theme.setAttribute("data-theme", type);
   };
+
+  const handleDisplay = () => {
+    navigate('/displayUser')
+  }
 
   return (
     <header>
@@ -69,6 +75,7 @@ const Navbar = () => {
               className="rounded-full w-9 h-9"
               src={user.photoURL}
               alt=""
+              onClick={handleDisplay}
             />
             <p>{user.displayName}</p>
           </div>

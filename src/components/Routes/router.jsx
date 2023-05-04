@@ -10,6 +10,7 @@ import Blog from "../Blog/Blog";
 import PrivetRoute from "./PrivetRoute";
 import About from "../About/About";
 import Order from "../Order/Order";
+import DisplayUserData from "../Shared/DisplayUserData";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
   {
     path: '/order',
     element: <Order></Order>
+  },
+  {
+    path: '/displayUser',
+    element: <DisplayUserData></DisplayUserData>
   }
 ]);
 
