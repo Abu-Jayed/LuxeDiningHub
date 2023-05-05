@@ -11,6 +11,7 @@ import PrivetRoute from "./PrivetRoute";
 import About from "../About/About";
 import Order from "../Order/Order";
 import DisplayUserData from "../Shared/DisplayUserData";
+import UpdateProfile from "../UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: '/displayUser',
     element: <DisplayUserData></DisplayUserData>
+  },
+  {
+    path: 'updateProfile',
+    element: <UpdateProfile></UpdateProfile>
   }
 ]);
 
