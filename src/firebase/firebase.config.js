@@ -5,14 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey:import.meta.env.VITE_apiKey ,
-  authDomain:import.meta.env.VITE_authDomain ,
-  projectId:import.meta.env.VITE_projectId,
-  storageBucket:import.meta.env.VITE_storageBucket,
-  messagingSenderId:import.meta.env.VITE_messagingSenderId,
-  appId:import.meta.env.VITE_appId,
+  apiKey: "AIzaSyC_rzLLT7XEcjuKSpFasgbGJKqLvkvSe1g",
+  authDomain: "hero-chef-a10.firebaseapp.com",
+  projectId: "hero-chef-a10",
+  storageBucket: "hero-chef-a10.appspot.com",
+  messagingSenderId: "869534918415",
+  appId: "1:869534918415:web:2fce6bb768f1b8e665807a"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export default app;
+export default app

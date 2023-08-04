@@ -4,7 +4,7 @@ import { FaBolt } from "react-icons/fa";
 const Services = () => {
   return (
     <div>
-      <div>
+      {/* <div>
         <h1 className="text-yellow-500 font-semibold mt-20 mb-5 text-center text-6xl">
           Our Service's
         </h1>
@@ -74,7 +74,7 @@ const Services = () => {
             <p className="">From self source</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

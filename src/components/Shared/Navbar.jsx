@@ -45,7 +45,7 @@ const Navbar = () => {
       <div>
         <Link to="/" className="flex items-center">
           <img className="w-12" src={logo} alt="" />
-          <h3>Chef Hero</h3>
+          <h3>LuxeDiningHub</h3>
         </Link>
       </div>
       <nav id="sidebar" className=" bg-slate-50" ref={navRef}>
