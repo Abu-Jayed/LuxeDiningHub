@@ -4,7 +4,6 @@ import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import Marquee from "react-fast-marquee";
 import "./Slider.css";
-import Navbar from "../Shared/Navbar";
 import chefImg from "../../assets/1131009_OQ5CLB0.jpg";
 
 const Slider = () => {
@@ -57,17 +56,13 @@ const Slider = () => {
             that's our promise to you! Where every bite is a masterpiece and
             every meal is a celebration.
           </p>
-          <div>
-            <Link>
-              <button className=" border-2 hover:bg-yellow-500 hover:translate-x-1 hover:translate-y-1 hover:border-t-4 hover:border-l-4 hover:shadow-2xl transform btn bg-yellow-500 mb-5">
-                About Us
-              </button>{" "}
-            </Link>
-          </div>
+          <button className="font-bold ml-[125px] md:ml-4 main_button ">
+      About Us
+      </button>
         </div>
       </div>
 
-      <Marquee
+      {/* <Marquee
         speed={100}
         className="bg-yellow-500 lg:h-48 lg:text-6xl text-5xl  font-bold ml-8 h-36 lg:ml-0 lg:rounded-none rounded-lg shadow-md  uppercase"
       >
@@ -95,7 +90,7 @@ const Slider = () => {
           src="https://assets.website-files.com/622ae0dc1c5d7674e36a2e37/622c3bff122fb63e435f4bff_Ticker2.png"
           alt=""
         />
-      </Marquee>
+      </Marquee> */}
     </div>
   );
 };

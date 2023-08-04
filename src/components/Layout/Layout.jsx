@@ -8,6 +8,8 @@ import Chef from '../Chef/Chef';
 import CustomersReview from '../CustomersReview/CustomersReview';
 import Header from '../Header/Header';
 import Services from '../Shared/Services';
+import OurServices from '../Services/OurServices';
+import FoodSection from '../FoodSection/FoodSection';
 
 const Layout = () => {
   return (
@@ -15,6 +17,8 @@ const Layout = () => {
       <Navbar></Navbar>
       <Header></Header>
       <Slider></Slider>
+      <OurServices></OurServices>
+      <FoodSection></FoodSection>
       <Chef></Chef>
       <Services></Services>
       <Outlet></Outlet>
