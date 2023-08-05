@@ -10,6 +10,7 @@ import Header from '../Header/Header';
 import Services from '../Shared/Services';
 import OurServices from '../Services/OurServices';
 import FoodSection from '../FoodSection/FoodSection';
+import Menu from '../Menu/Menu';
 
 const Layout = () => {
   return (
@@ -19,6 +20,7 @@ const Layout = () => {
       <Slider></Slider>
       <OurServices></OurServices>
       <FoodSection></FoodSection>
+      <Menu></Menu>
       <Chef></Chef>
       <Services></Services>
       <Outlet></Outlet>

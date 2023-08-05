@@ -1,0 +1,16 @@
+.zoom:hover{
+  transform: scale(1);
+}
+.zoom{
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+.icon_bg:hover #icon_bg {
+  background-color: #ffe745;
+  transition: 0.3s;
+}
+.icon_bg:hover #icon {
+  color: black;
+  transition: 0.3s;
+}
