@@ -19,9 +19,11 @@ const Menu = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-6 md:max-w-[80%] mx-auto">
       {menuImg.map((img, index) => (
-        <div className="relative icon_bg border-2 overflow-hidden" key={index}>
+        <div className="relative zoom icon_bg border-2 overflow-hidden" key={index}>
+          <div>
+
           <img
-            className="w-full h-full zoom"
+            className="w-full h-full "
             src={img}
             alt=""
           />
@@ -41,6 +43,8 @@ const Menu = () => {
           </div>
           {/* You can experiment with different blending modes here */}
         </div>
+        </div>
+
       ))}
     </div>
   );

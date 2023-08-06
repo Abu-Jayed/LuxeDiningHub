@@ -11,6 +11,8 @@ import Services from '../Shared/Services';
 import OurServices from '../Services/OurServices';
 import FoodSection from '../FoodSection/FoodSection';
 import Menu from '../Menu/Menu';
+import Article from '../Article/Article';
+import Follow from '../Follow/Follow';
 
 const Layout = () => {
   return (
@@ -25,6 +27,8 @@ const Layout = () => {
       <Services></Services>
       <Outlet></Outlet>
       <CustomersReview></CustomersReview>
+      <Article></Article>
+      <Follow></Follow>
       <Footer></Footer>
       <Toaster></Toaster>
     </div>
