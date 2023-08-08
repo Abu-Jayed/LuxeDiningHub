@@ -87,7 +87,7 @@ const Navbar = () => {
         <FaBars />
       </button>
       {user ? (
-          <Link onClick={handleLogOur} className="btn btn-info">
+          <Link onClick={handleLogOur} className="invisible md:visible btn btn-info">
             <button>Logout</button>
           </Link>
         ) : (

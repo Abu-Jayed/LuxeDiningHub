@@ -30,16 +30,16 @@ const Follow = () => {
             const blendModeElement = e.currentTarget.querySelector("#blend_mode");
             const instra_img = e.currentTarget.querySelector("#ins_img")
 
-            blendModeElement.classList.add("active");
+            blendModeElement.classList.add("activeF");
             instra_img.classList.add("rev_ins")
           
             setTimeout(() => {
-              blendModeElement.classList.remove("active");
+              blendModeElement.classList.remove("activeF");
             instra_img.classList.remove("rev_ins")
             }, 700); 
           }}
           onMouseEnter={(e) =>
-            e.currentTarget.querySelector("#blend_mode").classList.remove("active")
+            e.currentTarget.querySelector("#blend_mode").classList.remove("activeF")
           }
           >
             <img

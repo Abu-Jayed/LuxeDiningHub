@@ -34,7 +34,7 @@
   transition-timing-function: linear;
 }
 
-.active{
+.activeF{
   background-color: black;
   top: 100%;
   opacity: 0.6;
