@@ -1,0 +1,34 @@
+.footer_cta{
+  background-image: url('../../assets/footer_cta.png');
+  position: relative;
+    /* height: 400px; */
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;;
+}
+
+.cta_para{
+  font-family: Poppins, sans-serif;
+}
+
+.cta_submit{
+  width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.w_button{
+  display: inline-block;
+    padding: 9px 15px;
+    /* background-color: #3898EC; */
+    color: white;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    /* border-radius: 0; */
+}

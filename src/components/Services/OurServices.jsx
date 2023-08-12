@@ -6,9 +6,12 @@ import chefImg from "../../assets/1131009_OQ5CLB0.jpg";
 
 const OurServices = () => {
   const [selectedTitle, setSelectedTitle] = useState(0);
+  const [loading, setLoading] = useState(false)
 
   const handleTitleClick = (index) => {
+    setLoading(true)
     setSelectedTitle(index);
+    setLoading(false)
   };
 
   const titles = [
@@ -38,7 +41,9 @@ const OurServices = () => {
         </p>
         <section className='md:flex items-center'>
           <div className='md:w-[50%]'>
-            <img src={images[selectedTitle]} alt="" />
+            {
+              loading ? <p className='text-4xl text-red-500 font-bold'>Loading</p> : <img src={images[selectedTitle]} alt="" /> 
+            }
           </div>
           <div className=' md:w-[50%]'>
           {titles.map((title, index) => (

@@ -13,6 +13,8 @@ import FoodSection from '../FoodSection/FoodSection';
 import Menu from '../Menu/Menu';
 import Article from '../Article/Article';
 import Follow from '../Follow/Follow';
+import FooterCta from '../Footer_cta/FooterCta';
+import Subscription from '../Subcription/Subscription';
 
 const Layout = () => {
   return (
@@ -29,6 +31,8 @@ const Layout = () => {
       <CustomersReview></CustomersReview>
       <Article></Article>
       <Follow></Follow>
+      <FooterCta></FooterCta>
+      {/* <Subscription></Subscription> */}
       <Footer></Footer>
       <Toaster></Toaster>
     </div>
