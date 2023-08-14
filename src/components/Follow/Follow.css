@@ -34,7 +34,7 @@
   transition-timing-function: linear;
 }
 
-.ff ul, li,h1{
+.ff ul, li,h1,button, div,p,footer{
 	font-family: Poppins, sans-serif;
 }
 
