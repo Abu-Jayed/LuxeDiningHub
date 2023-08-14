@@ -1,46 +1,93 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png'
+import { BiAccessibility } from "react-icons/bi";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <section className="p-4 bg-black bg-opacity-95 grid lg:grid-cols-4 grid-cols-1 text-white md:text-left text-center gap-3">
-      <div>
-        <div className="flex items-center md:ml-0 ml-24">
-        <img className="w-20" src={logo} alt="" />
-        <h1 className="text-gray-200 text-3xl mb-2">Hero Chef</h1>
+    <footer className="  p-4 bg-[#38393b] bg-opacity-95 text-white md:text-left text-center gap-3 ff">
+
+      <div className="footer_container grid grid-cols-3 ">
+
+        <div className="border-2">
+          <h1 className=" text-4xl">What We Offer</h1>
+          <ul className="grid grid-cols-2 ">
+            <li className=" ">Pizzas</li>
+            <li className=" ">Burgers</li>
+            <li className=" ">Salads</li>
+            <li className=" ">Drinks</li>
+            <li className=" ">Seafood</li>
+            <li className=" ">Drinks</li>
+          </ul>
         </div>
-        <p className="text-gray-300">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id proin purus, tempus facilisi ut viverra. Nunc adipiscing
-        </p>
-      </div>
-      <div>
-        <h1 className="text-gray-200 text-3xl mb-2 md:mt-0 mt-8">Get to know us</h1>
-        <div className="text-gray-300  flex flex-col gap-2">
-          <Link to="/">Home</Link>
-          <Link to="/">About</Link>
-          <Link to="/">Blog</Link>
-          <Link to="/">Contact us</Link>
+
+        <div className="border-2">
+          <h1>What We Offer</h1>
+          <ul className="grid grid-cols-2 ">
+            <li className=" ">Pizzas</li>
+            <li className=" ">Burgers</li>
+            <li className=" ">Salads</li>
+            <li className=" ">Drinks</li>
+            <li className=" ">Seafood</li>
+            <li className=" ">Drinks</li>
+          </ul>
         </div>
-      </div>
-      <div>
-        <h1 className="text-gray-200 text-3xl mb-2 md:mt-0 mt-8">Get in touch</h1>
-        <div className="text-gray-300  flex flex-col gap-2">
-          <Link>01406199567</Link>
-          <Link>mdabujayed2006@gmail.com</Link>
-          <Link>demo@email.com</Link>
+
+        
+
+        <div className="border-2">
+          <h1>Newsletter</h1>
+          <div>
+          <input style={{ fontFamily: "'Poppins', sans-serif" }} className=" placeholder:text-slate-500 block bg-white w-[400px] h-[50px] border border-slate-300 rounded-md py-2 pl-4 pr-3 mb-4 shadow-sm focus:outline-none focus:border-sky-500 focus:border  focus:ring-1 cta_input " placeholder="Just add your email" type="text" name="search"/>
+          </div>
         </div>
+
       </div>
-      <div>
-        <h1 className="text-gray-200 md:mt-0 mt-8 text-3xl mb-2">Follow us</h1>
-        <div className="text-gray-300  flex flex-col gap-2">
-          <Link to="/">Facebook</Link>
-          <Link>Linkedin</Link>
-          <Link>Twittwer</Link>
-          <Link>YouTube</Link>
+      <hr />
+
+      <div className="flex gap-10">
+
+        <div>
+          <h1 className="text-4xl cursor-pointer">LuxeDiningHub</h1>
         </div>
+
+        <div>
+          Subscribe
+        </div>
+
+        <div>
+          +880 1406 199 567
+        </div>
+
+        <div>
+          mdabujayed2006@gmail.com
+        </div>
+
+        <div className="flex">
+          <a href="https://www.instagram.com/luxedininghub/?hl=en" target="_blank" rel="noreferrer">
+            <FaFacebook></FaFacebook>
+          </a>
+          <a href="https://www.instagram.com/luxedininghub/?hl=en" target="_blank" rel="noreferrer">
+            <FaInstagram></FaInstagram>
+          </a>
+          <a href="https://www.instagram.com/luxedininghub/?hl=en" target="_blank" rel="noreferrer">
+            <FaLinkedin></FaLinkedin>
+          </a>
+          <a href="https://www.instagram.com/luxedininghub/?hl=en" target="_blank" rel="noreferrer">
+            <FaTwitter></FaTwitter>
+          </a>
+        </div>
+
+
       </div>
-    </section>
+
+      <div className="flex items-center justify-between px-10  ">
+          <h1>514 S. Magnolia St. Orlando, FL 32806</h1>
+          <h1>© 2023. All Rights Reserved. Design by AJ</h1>
+        </div>
+      
+    </footer>
   );
 };
 

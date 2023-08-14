@@ -10,9 +10,11 @@
 }
 
 
+
 #sidebar a.active {
   color: red;
 }
+
 
 :root {
 	--mainColor: #29335c;

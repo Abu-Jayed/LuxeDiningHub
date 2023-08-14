@@ -34,6 +34,10 @@
   transition-timing-function: linear;
 }
 
+.ff ul, li,h1{
+	font-family: Poppins, sans-serif;
+}
+
 .activeF{
   background-color: black;
   top: 100%;
