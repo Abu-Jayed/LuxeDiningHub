@@ -113,7 +113,7 @@ const Footer = () => {
 
       <hr className="opacity-30 my-8  " />
 
-      <div className="flex items-center justify-between px-10  ">
+      <div className="flex items-center justify-between px-10">
         <h1>514 S. Magnolia St. Orlando, FL 32806</h1>
         <h1>© 2023. All Rights Reserved. Design by AJ</h1>
       </div>
