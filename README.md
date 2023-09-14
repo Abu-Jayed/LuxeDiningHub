@@ -1,10 +1,6 @@
-# b7a10-chef-recipe-hunter-client-side-Abu-Jayed
-b7a10-chef-recipe-hunter-client-side-Abu-Jayed created by GitHub Classroom
+# LuxeDiningHub
 
-
-# Hero-Chef
-
-This project is created for chef. We show our highly skilled chef. over 5 years of exprerience. Have finished many big arrangment successfully whith 5 start rating.
+This project is created for Resturent. We show our highly skilled chef. over 5 years of exprerience. Have finished many big arrangment successfully whith 5 start rating.
 
 
 
