@@ -55,7 +55,7 @@ const Menu = () => {
             <img className="w-full h-full " src={data.img} alt="" />
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 pointer-events-none"></div>
             <div className=" text-center flex justify-center items-center">
-              <div className=" absolute top-[75px] left-[130px] text-4xl text-white">
+              <div className=" absolute top-[50px] left-[110px] text-4xl text-white">
                 <div className="rounded-full border-[5px] border-white border-opacity-40 p-[2px]">
                   <div
                     id="icon_bg"
